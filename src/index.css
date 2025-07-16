@@ -6,7 +6,7 @@ body {
 }
 
 .App {
-  max-width: 500px;
+  max-width: 400px;
   margin: 40px auto;
   background: #fff;
   border-radius: 12px;
@@ -16,34 +16,92 @@ body {
 
 header, footer {
   text-align: center;
- 
-  background:rgb(15, 148, 201);
-  color: #fff;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-main {
-  text-align: center;
   padding: 16px 0;
-  background: skyblue;
+  background: #1976d2;
   color: #fff;
   border-radius: 8px;
   margin-bottom: 24px;
 }
 
+main {
+  text-align: center;
+}
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-button {
-  margin: 0 10px;
-  padding: 12px 32px;
-  font-size: 1rem;
-  border: none;
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e3eafc;
+  margin-bottom: 12px;
+  padding: 12px 16px;
   border-radius: 6px;
-  cursor: pointer;
   transition: background 0.2s;
 }
 
+li:hover {
+  background: #d1dbf7;
+}
+
+input[type="checkbox"] {
+  accent-color: #1976d2;
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+}
+
+label {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 8px;
+}
+
 button:hover {
-  opacity: 0.9;
+  background: #115293;
+}
+
+@media (max-width: 500px) {
+  .App {
+    max-width: 98vw;
+    padding: 16px 4px;
+  }
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 8px;
+  }
+  li label {
+    margin-bottom: 8px;
+  }
+  button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
+
+main .item svg :hover {
+  color : rgb(236, 70, 70)
+}
+main .item svg  {
+  outline :none;
+  cursor: pointer;
 }
